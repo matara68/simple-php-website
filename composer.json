@@ -3,7 +3,8 @@
 	"description": "Project to test Azire CI/CD",
 	"authors": [
 		{
-			"name": "matara"
+			"name": "matara",
+			"email": "matara68@gmail.com"
 		}
 	]
 }
