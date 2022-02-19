@@ -2,7 +2,8 @@
 	"name": "simple-php-website-master",
 	"description": "Project to test Azire CI/CD",
 	"authors": [
-		{"name": "Matara"
+		{
+			"name": "matara"
 		}
 	]
 }
