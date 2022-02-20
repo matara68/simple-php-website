@@ -24,3 +24,18 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
+  
+- task: ArchiveFiles@2
+  displayName: 'Archive Files'
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
+    archiveType: 'zip'
+    includeRootFolder: false
+    replaceExistingArchive: true
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.DefinitionName).$(Build.BuildId).zip'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    ArtifactName: 'drop'
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
